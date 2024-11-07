@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,23 +8,79 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- DaisyUI and Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- FontAwesome CDN -->
     <script src="https://kit.fontawesome.com/f43c6006f5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="navbar ">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-            <i class="fa-solid fa-arrow-right -rotate-45 rounded-full bg-green-200 p-3"></i>
-            <h1 class="text-xl font-bold">Rinterio</h1>
-        </div>
+    <!-- Header Section -->
+    <header>
+        <nav class="w-11/12 mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+
+                    <!-- Logo -->
+                    <div class="cursor-pointer">
+                        <i class="fa-solid fa-arrow-right -rotate-45 rounded-full bg-primaryColor p-3 mr-2"></i>
+                        <a class="text-xl">Rinterio</a>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-lg font-medium">
+                        <li><a class="font-bold" href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Portfolio</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="bg-primaryColor p-1 rounded font-semibold">
+                            <a class="" href="">Book Consult</a>
+                            <i class="fa-solid fa-arrow-right -rotate-45 rounded-full bg-black text-white p-1 ml-2"></i>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Portfolio</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main></main>
     <footer></footer>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: 'rgb(171, 239, 95)',
+                    },
+                    fontFamily: {
+                        manrope: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
